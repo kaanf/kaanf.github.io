@@ -348,3 +348,10 @@ body{min-height:100svh;display:flex;flex-direction:column}
 /* the fifth card is a photo now, not the blank "+" placeholder, so it takes
    the same dark backing and shadow as the other tiles */
 .tile.plus{background:#171310;box-shadow:0 1px 2px rgba(23,19,14,.18),0 6px 12px -4px rgba(23,19,14,.22),0 18px 34px -14px rgba(23,19,14,.34),0 44px 70px -30px rgba(23,19,14,.5),inset 0 0 0 1px rgba(255,255,255,.07)}
+
+/* polaroid caption: bold handwriting, and sized per breakpoint rather than by
+   viewport, because it has to fit the card's own width on one line */
+.polabar .hand{font-weight:700;opacity:.95;font-size:17px}
+@media(max-width:1060px){.polabar .hand{font-size:15px}}
+@media(max-width:900px){.polabar .hand{font-size:13px}}
+@media(max-width:560px){.polabar .hand{font-size:16.5px}}
