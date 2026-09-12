@@ -308,3 +308,15 @@ body{min-height:100svh;display:flex;flex-direction:column}
 @media(max-width:900px){.hero.solo{padding:74px 0 28px}.mark{top:18px}}
 @media(max-width:560px){.hero.solo h1{font-size:clamp(32px,10.5vw,46px);line-height:1.02}.mark .brand img{height:22px}.mark .brand span{font-size:10px}.solo .badges{gap:10px}.solo .badges img{height:44px}}
 @media(max-width:380px){.solo .badges img{height:40px}}
+
+/* ---- added: landscape phones (the design's shortest step stops at 560px tall,
+   which still pushes the store badges below the fold around 390-420px) ---- */
+@media(max-height:460px){
+.mark{top:10px}
+.mark .brand img{height:20px}
+.hero.solo{padding:46px 0 14px}
+.hero.solo h1{font-size:clamp(26px,4vw,38px)}
+.hero.solo .reelstage{margin-top:10px}
+.solo .badges{margin-top:12px}
+.solo .badges img{height:38px}
+}
