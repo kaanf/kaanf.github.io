@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Crew — Come alone. Play the room.</title>
+<meta name="description" content="Crew turns a room full of strangers into a night worth remembering. Come alone. Play the room.">
+<meta name="theme-color" content="#F6F1E7">
+<link rel="icon" href="img/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Crew — Come alone. Play the room.">
+<meta property="og:description" content="Crew turns a room full of strangers into a night worth remembering.">
+<meta property="og:image" content="https://kaanf.github.io/img/icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="landing.css">
+</head>
+<body>
+<div class="mark"><div class="wrap"><a class="brand" href="#top"><img src="img/wordmark.png" alt="Crew"><span>play the room</span></a></div></div>
+
+<section class="hero solo full" id="top">
+<div class="wrap">
+<h1 class="rv">Come alone.<br><span class="hl">Play the room.</span></h1>
+</div>
+<div class="reelstage">
+<div class="reel pola" id="reel">
+<div class="tile lead-tile"><div class="spin"><div class="frame"><div class="shot"><img src="img/bench.jpg" alt="Three players on a bench"></div><div class="polabar"><span class="hand">Drunken Monkey Hostel</span></div></div></div></div>
+<div class="tile t2"><div class="shot"><img src="img/selfie.jpg" alt="Selfie from a table"></div></div>
+<div class="tile t3"><div class="shot"><img src="img/courtyard.jpg" alt="The courtyard mid-night"></div></div>
+<div class="tile t4"><div class="shot"><img src="img/table.jpg" alt="Players at a table"></div></div>
+<div class="tile plus"><span>+</span></div>
+</div>
+</div>
+<div class="wrap">
+<div class="badges rv" style="--d:.16s">
+<a href="#" aria-label="Download on the App Store"><img src="img/appstore.svg" alt="Download on the App Store"></a>
+<a href="#" aria-label="Get it on Google Play"><img src="img/googleplay.png" alt="Get it on Google Play"></a>
+</div>
+</div>
+</section>
+
+<script>
+(function(){var r=document.getElementById('reel');if(!r)return;var i=0;
+var SEQ=[['pola',3200],['open',4600]];
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){r.className='reel open';return;}
+r.className='reel pola';
+setTimeout(function step(){var s=SEQ[i];r.className='reel '+s[0];i=(i+1)%SEQ.length;setTimeout(step,s[1]);},2600);
+})();
+</script>
+</body>
+</html>
