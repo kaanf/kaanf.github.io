@@ -325,19 +325,21 @@ body{min-height:100svh;display:flex;flex-direction:column}
 /* faster tile transition than the design's 1.15s default */
 :root{--reelT:.85s}
 
-/* phones: bigger tiles and a wider fan, so each photo shows more than a sliver.
+/* phones: much bigger tiles and a far wider fan than the design's mobile step,
+   which left every photo as a ~47px sliver. The lead polaroid is pinned 10px
+   from the left edge so its caption never clips; the rest step right from it
+   by 19vw, so on the narrowest phones the strip runs off the right edge.
    Scoped to 560px so tablets keep the design's own geometry. */
 @media(max-width:560px){
-.tile{width:150px;height:206px;margin:-103px 0 0 -75px}
-.lead-tile{width:178px;height:250px;margin:-144px 0 0 -89px}
-.frame .shot{height:calc(100% - 48px)}
-.polabar{height:48px}
-.hero.solo .reelstage{height:calc(368px * var(--rs))}
-/* lead tile is pinned 12px from the left edge so its caption never clips;
-   the rest step right from it by 16vw */
-.reel.open .lead-tile{transform:rotate(-1.5deg) translate(calc(101px - 50vw),8px)}
-.reel.open .t2{transform:rotate(1.5deg) translate(calc(28px - 16vw),16px)}
-.reel.open .t3{transform:rotate(-1.2deg) translate(28px,10px)}
-.reel.open .t4{transform:rotate(2deg) translate(calc(28px + 16vw),18px)}
-.reel.open .plus{transform:rotate(-2deg) translate(calc(28px + 32vw),8px)}
+.tile{width:172px;height:237px;margin:-120px 0 0 -86px}
+.lead-tile{width:200px;height:281px;margin:-162px 0 0 -100px}
+.frame{padding:11px 11px 0}
+.frame .shot{height:calc(100% - 56px)}
+.polabar{height:56px}
+.hero.solo .reelstage{height:calc(384px * var(--rs))}
+.reel.open .lead-tile{transform:rotate(-1.5deg) translate(calc(110px - 50vw),8px)}
+.reel.open .t2{transform:rotate(1.5deg) translate(calc(124px - 31vw),16px)}
+.reel.open .t3{transform:rotate(-1.2deg) translate(calc(124px - 12vw),10px)}
+.reel.open .t4{transform:rotate(2deg) translate(calc(124px + 7vw),18px)}
+.reel.open .plus{transform:rotate(-2deg) translate(calc(124px + 26vw),8px)}
 }
