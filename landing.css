@@ -344,3 +344,7 @@ body{min-height:100svh;display:flex;flex-direction:column}
 .reel.open .t4{transform:rotate(3deg) translate(20vw,4px);z-index:5}
 .reel.open .plus{transform:rotate(-3.5deg) translate(40vw,20px);z-index:4}
 }
+
+/* the fifth card is a photo now, not the blank "+" placeholder, so it takes
+   the same dark backing and shadow as the other tiles */
+.tile.plus{background:#171310;box-shadow:0 1px 2px rgba(23,19,14,.18),0 6px 12px -4px rgba(23,19,14,.22),0 18px 34px -14px rgba(23,19,14,.34),0 44px 70px -30px rgba(23,19,14,.5),inset 0 0 0 1px rgba(255,255,255,.07)}
