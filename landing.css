@@ -325,10 +325,11 @@ body{min-height:100svh;display:flex;flex-direction:column}
 /* faster tile transition than the design's 1.15s default */
 :root{--reelT:.85s}
 
-/* phones: much bigger tiles and a far wider fan than the design's mobile step,
-   which left every photo as a ~47px sliver. The lead polaroid is pinned 10px
-   from the left edge so its caption never clips; the rest step right from it
-   by 19vw, so on the narrowest phones the strip runs off the right edge.
+/* phones: bigger tiles, and the fan is rebuilt around the centre instead of
+   the design's left-anchored strip, which pushed cards off the right edge.
+   The captioned polaroid sits in the middle and stays fully visible; the two
+   outer photos bleed off each edge by the same amount, so the whole group
+   reads as centred. Stacking runs highest at the centre and drops outward.
    Scoped to 560px so tablets keep the design's own geometry. */
 @media(max-width:560px){
 .tile{width:172px;height:237px;margin:-120px 0 0 -86px}
@@ -337,9 +338,9 @@ body{min-height:100svh;display:flex;flex-direction:column}
 .frame .shot{height:calc(100% - 56px)}
 .polabar{height:56px}
 .hero.solo .reelstage{height:calc(384px * var(--rs))}
-.reel.open .lead-tile{transform:rotate(-1.5deg) translate(calc(110px - 50vw),8px)}
-.reel.open .t2{transform:rotate(1.5deg) translate(calc(124px - 31vw),16px)}
-.reel.open .t3{transform:rotate(-1.2deg) translate(calc(124px - 12vw),10px)}
-.reel.open .t4{transform:rotate(2deg) translate(calc(124px + 7vw),18px)}
-.reel.open .plus{transform:rotate(-2deg) translate(calc(124px + 26vw),8px)}
+.reel.open .t2{transform:rotate(-4deg) translate(-40vw,22px);z-index:1}
+.reel.open .t3{transform:rotate(2.5deg) translate(-20vw,6px);z-index:2}
+.reel.open .lead-tile{transform:rotate(-1.5deg) translate(0,14px);z-index:6}
+.reel.open .t4{transform:rotate(3deg) translate(20vw,4px);z-index:5}
+.reel.open .plus{transform:rotate(-3.5deg) translate(40vw,20px);z-index:4}
 }
