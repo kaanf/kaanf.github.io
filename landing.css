@@ -349,9 +349,44 @@ body{min-height:100svh;display:flex;flex-direction:column}
    the same dark backing and shadow as the other tiles */
 .tile.plus{background:#171310;box-shadow:0 1px 2px rgba(23,19,14,.18),0 6px 12px -4px rgba(23,19,14,.22),0 18px 34px -14px rgba(23,19,14,.34),0 44px 70px -30px rgba(23,19,14,.5),inset 0 0 0 1px rgba(255,255,255,.07)}
 
-/* polaroid caption: bold handwriting, and sized per breakpoint rather than by
-   viewport, because it has to fit the card's own width on one line */
-.polabar .hand{font-weight:700;opacity:.95;font-size:17px}
-@media(max-width:1060px){.polabar .hand{font-size:15px}}
-@media(max-width:900px){.polabar .hand{font-size:13px}}
-@media(max-width:560px){.polabar .hand{font-size:16.5px}}
+/* the polaroid frame is gone. The lead tile is a plain photo card like the
+   other four, just larger, so it takes back the backing, radius and shadow
+   the frame used to supply. */
+.tile.lead-tile{background:#171310;border-radius:22px;overflow:hidden;box-shadow:0 1px 2px rgba(23,19,14,.18),0 6px 12px -4px rgba(23,19,14,.22),0 18px 34px -14px rgba(23,19,14,.34),0 44px 70px -30px rgba(23,19,14,.5),inset 0 0 0 1px rgba(255,255,255,.07)}
+@media(max-width:900px){.tile.lead-tile{border-radius:16px}}
+
+/* the caption is written onto the photo now, over a soft scrim so it reads on
+   any shot. Sized per breakpoint, because it must fit the card's own width. */
+.lead-tile:after{content:"";position:absolute;left:0;right:0;bottom:0;height:44%;background:linear-gradient(to top,rgba(14,11,8,.8),rgba(14,11,8,0));z-index:1;pointer-events:none}
+.hand{position:absolute;left:9px;right:9px;bottom:13px;z-index:2;text-align:center;font-family:'Caveat',cursive;font-weight:700;line-height:1;color:#F6F1E7;transform:rotate(-1.5deg);text-shadow:0 2px 12px rgba(0,0,0,.55);white-space:nowrap;font-size:18px}
+@media(max-width:1060px){.hand{font-size:16px}}
+@media(max-width:900px){.hand{font-size:14px;bottom:10px}}
+@media(max-width:560px){.hand{font-size:17px;bottom:13px}}
+
+/* emoji drifting over the page at three depths: the far ones are small,
+   blurred and sit behind the cards, the near ones are large, sharp and float
+   in front. Decorative only, so they never take pointer events. */
+.floaties{position:absolute;inset:0;pointer-events:none}
+.floaties .f{position:absolute;left:var(--l);top:var(--t);font-size:var(--s);line-height:1;transform:rotate(var(--r));animation:floaty var(--dur,11s) ease-in-out var(--d,0s) infinite;will-change:transform}
+.floaties .far{z-index:1;opacity:.42;filter:blur(1.5px)}
+.floaties .mid{z-index:2;opacity:.62;filter:blur(.6px)}
+.floaties .near{z-index:8;opacity:.85}
+@keyframes floaty{
+0%,100%{transform:translate3d(0,0,0) rotate(var(--r))}
+50%{transform:translate3d(var(--dx,9px),var(--dy,-24px),0) rotate(calc(var(--r) + var(--dr,9deg)))}
+}
+@media(prefers-reduced-motion:reduce){.floaties .f{animation:none}}
+/* phones have no side margins to spare, so the mid layer goes and the rest
+   pulls into the corners above the headline and below the badges */
+@media(max-width:560px){
+.floaties .mid{display:none}
+.floaties .far{opacity:.36}
+.floaties .near{opacity:.7}
+.floaties .f{font-size:calc(var(--s) * .78)}
+.floaties .f:nth-child(1){left:5%;top:7%}
+.floaties .f:nth-child(2){left:86%;top:6%}
+.floaties .f:nth-child(3){left:7%;top:90%}
+.floaties .f:nth-child(4){left:88%;top:89%}
+.floaties .f:nth-child(8){left:2%;top:20%}
+.floaties .f:nth-child(9){left:90%;top:21%}
+}
