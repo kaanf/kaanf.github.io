@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Crew — Come alone. Play the room.</title>
 <meta name="description" content="Crew turns a room full of strangers into a night worth remembering. Come alone. Play the room.">
-<meta name="theme-color" content="#F6F1E7">
+<meta name="theme-color" content="#100E0C">
 <link rel="icon" href="img/icon.png" type="image/png">
 <link rel="apple-touch-icon" href="img/icon-180.png">
 <meta property="og:type" content="website">
@@ -15,34 +15,25 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="landing.css">
 </head>
 <body>
 <div class="mark"><div class="wrap"><a class="brand" href="#top"><img src="img/wordmark.png" alt="Crew"><span>play the room</span></a></div></div>
 
 <section class="hero solo full" id="top">
-<div class="floaties" aria-hidden="true">
-<span class="f far"  style="--l:6%;--t:14%;--s:30px;--r:-14deg;--dur:13s;--d:0s;--dy:-26px">&#127867;</span>
-<span class="f far"  style="--l:90%;--t:11%;--s:26px;--r:16deg;--dur:15s;--d:1.4s;--dy:-20px;--dx:-10px">&#127922;</span>
-<span class="f far"  style="--l:4%;--t:66%;--s:24px;--r:-8deg;--dur:14s;--d:2.1s;--dy:-18px">&#10024;</span>
-<span class="f far"  style="--l:93%;--t:70%;--s:28px;--r:12deg;--dur:12s;--d:.7s;--dy:-24px;--dx:-8px">&#127881;</span>
-<span class="f mid"  style="--l:13%;--t:38%;--s:34px;--r:9deg;--dur:10s;--d:.4s;--dy:-30px">&#128247;</span>
-<span class="f mid"  style="--l:85%;--t:34%;--s:32px;--r:-11deg;--dur:11s;--d:1.9s;--dy:-28px;--dx:-12px">&#128378;</span>
-<span class="f mid"  style="--l:8%;--t:87%;--s:26px;--r:14deg;--dur:12.5s;--d:2.6s;--dy:-22px">&#127926;</span>
-<span class="f near" style="--l:2%;--t:48%;--s:44px;--r:-6deg;--dur:9s;--d:.9s;--dy:-34px">&#127866;</span>
-<span class="f near" style="--l:94%;--t:52%;--s:40px;--r:8deg;--dur:9.6s;--d:.2s;--dy:-32px;--dx:-14px">&#128293;</span>
-</div>
 <div class="wrap">
-<h1 class="rv">Come alone.<br><span class="hl">Play the room.</span></h1>
+<h1 class="rv">We create experiences that<br>turn strangers into friends.</h1>
+<p class="sub rv">Because meeting people shouldn’t be<br>another thing you do online.</p>
 </div>
 <div class="reelstage">
-<div class="reel pola" id="reel">
-<div class="tile lead-tile"><div class="shot"><img src="img/pub.jpg" alt="A full table under the lights"></div><span class="hand">Drunken Monkey Hostel, 2026</span></div>
-<div class="tile t2"><div class="shot"><img src="img/selfie.jpg" alt="Selfie from a table"></div></div>
-<div class="tile t3"><div class="shot"><img src="img/courtyard.jpg" alt="The courtyard mid-night"></div></div>
-<div class="tile t4"><div class="shot"><img src="img/table.jpg" alt="Players at a table"></div></div>
-<div class="tile plus"><div class="shot"><img src="img/bench.jpg" alt="Three players on a bench"></div></div>
+<div class="reel" id="reel">
+<div class="tile"><div class="shot"><img src="img/selfie.jpg" alt="Selfie from a table"></div></div>
+<div class="tile"><div class="shot"><img src="img/tv.jpg" alt="An old CRT glowing behind the bar"></div></div>
+<div class="tile"><div class="shot"><img src="img/courtyard.jpg" alt="The courtyard mid-night"></div></div>
+<div class="tile"><div class="shot"><img src="img/crowd.jpg" alt="A packed room, everyone talking"></div></div>
+<div class="tile"><div class="shot"><img src="img/table.jpg" alt="Players at a table"></div></div>
+<div class="tile"><div class="shot"><img src="img/trio.jpg" alt="Three of us outside the bar"></div></div>
 </div>
 </div>
 <div class="wrap">
@@ -53,13 +44,5 @@
 </div>
 </section>
 
-<script>
-(function(){var r=document.getElementById('reel');if(!r)return;var i=0;
-var SEQ=[['pola',2200],['open',3400]];
-if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){r.className='reel open';return;}
-r.className='reel pola';
-setTimeout(function step(){var s=SEQ[i];r.className='reel '+s[0];i=(i+1)%SEQ.length;setTimeout(step,s[1]);},1200);
-})();
-</script>
 </body>
 </html>
