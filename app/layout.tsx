@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Geist, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist } from "next/font/google";
 import Footer from "@/components/Footer";
 import "./landing.css";
 import "@/components/footer.css";
@@ -14,12 +14,6 @@ const sans = Geist({
   variable: "--font-sans",
   fallback: ["system-ui", "sans-serif"],
 });
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  fallback: ["ui-monospace", "monospace"],
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://crewishere.com"),
   title: "Crew — Come alone. Play the room.",
@@ -49,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
+    <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <body>
         {children}
         <Footer />

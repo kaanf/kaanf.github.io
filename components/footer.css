@@ -1,16 +1,22 @@
 /* Footer — the room's floor: a shade darker than the page, hairline on top. */
 .ft{position:relative;z-index:100;background:#000;box-shadow:inset 0 1px 0 rgba(246,241,231,.09);padding:clamp(48px,7svh,76px) 0 clamp(28px,4svh,40px)}
-.ft-top{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,56px)}
+.ft-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,56px)}
 .ft-brand img{height:24px;width:auto;display:block}
 .ft-brand p{margin-top:16px;font-size:14px;line-height:1.6;color:rgba(246,241,231,.45);max-width:34ch}
 
-.ft-label{font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,241,231,.35)}
+/* socials sit with the wordmark, not in their own column — the grid is full */
+.ft-social{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.ft-social a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;color:rgba(246,241,231,.6);box-shadow:inset 0 0 0 1px rgba(255,255,255,.13);transition:color .2s,box-shadow .2s}
+.ft-social a:hover{color:var(--lime);box-shadow:inset 0 0 0 1px rgba(200,255,61,.4)}
+
+.ft-label{font-family:var(--font-sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,241,231,.35)}
 .ft-nav{display:flex;flex-direction:column;gap:11px}
+.ft-nav .ft-emoji{font-size:.88em;margin-right:.45em}
 .ft-nav a{font-size:14px;color:rgba(246,241,231,.6);transition:color .2s}
 .ft-nav a:hover{color:var(--lime)}
 .ft-nav .ft-label{margin-bottom:3px}
 
-.ft-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:clamp(36px,6svh,60px);padding-top:22px;border-top:1px solid rgba(246,241,231,.09);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,241,231,.35)}
+.ft-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:clamp(36px,6svh,60px);padding-top:22px;border-top:1px solid rgba(246,241,231,.09);font-family:var(--font-sans);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,241,231,.35)}
 .ft-bottom a{color:rgba(246,241,231,.35);transition:color .2s}
 .ft-bottom a:hover{color:var(--lime)}
 

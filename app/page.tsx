@@ -23,7 +23,7 @@ export default function Home() {
       <section className="hero solo full" id="top">
         <div className="wrap">
           <h1 className="rv">
-            We create experiences that
+            🫶 We create experiences that
             <br />
             turn strangers into friends.
           </h1>
