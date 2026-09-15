@@ -1,5 +1,5 @@
 /* ---- landing-retro.css (verbatim; font loading moved to a <link> in index.html) ---- */
-:root{--cream:#F6F1E7;--cream2:#EFE8DB;--ink:#17130E;--ink2:#4A4239;--ink3:#8C8175;--lime:#C8FF3D;--line:rgba(23,19,14,.12);--r:26px}
+:root{--accent:#4A6B0A;--cream:#F6F1E7;--cream2:#EFE8DB;--ink:#17130E;--ink2:#4A4239;--ink3:#8C8175;--lime:#C8FF3D;--line:rgba(23,19,14,.12);--r:26px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -7,7 +7,7 @@ a{color:var(--ink);text-decoration:none}
 a:hover{color:var(--ink2)}
 .wrap{width:min(1180px,90vw);margin:0 auto}
 h1,h2,h3{font-family:var(--font-display);font-weight:800;letter-spacing:-.035em;line-height:.92;text-wrap:balance}
-.mono{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
+.mono{font-family:var(--font-sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
 .btn{display:inline-flex;align-items:center;gap:9px;height:54px;padding:0 26px;border-radius:999px;background:var(--ink);color:var(--cream);font-weight:600;font-size:15.5px;border:0;cursor:pointer;transition:transform .18s,background .18s}
 .btn:hover{transform:translateY(-2px);background:#000;color:var(--cream)}
 .btn.lime{background:var(--lime);color:var(--ink)}
@@ -16,7 +16,7 @@ h1,h2,h3{font-family:var(--font-display);font-weight:800;letter-spacing:-.035em;
 .btn.ghost:hover{background:rgba(23,19,14,.05);color:var(--ink)}
 .store{display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 18px 0 15px;border-radius:14px;background:var(--ink);color:var(--cream);transition:transform .18s}
 .store:hover{transform:translateY(-2px);color:var(--cream)}
-.store i{font-family:var(--font-mono);font-style:normal;font-size:10px;letter-spacing:.1em;opacity:.6}
+.store i{font-family:var(--font-sans);font-style:normal;font-size:10px;letter-spacing:.1em;opacity:.6}
 .store span{display:flex;flex-direction:column;line-height:1.15}
 .store em{font-style:normal;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;opacity:.65}
 .store b{font-size:14.5px;font-weight:600}
@@ -27,7 +27,7 @@ h1,h2,h3{font-family:var(--font-display);font-weight:800;letter-spacing:-.035em;
 .navin{display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(1180px,90vw);margin:0 auto}
 .brand{display:flex;align-items:center;gap:12px}
 .brand img{height:26px;width:auto;filter:invert(1) brightness(.12)}
-.brand span{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3)}
+.brand span{font-family:var(--font-sans);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3)}
 .nlinks{display:flex;gap:28px;font-size:14.5px;color:var(--ink2)}
 .nav .btn{height:44px;padding:0 20px;font-size:14.5px}
 
@@ -54,7 +54,7 @@ h1 .hl:after{content:"";position:absolute;left:-.04em;right:-.04em;bottom:.26em;
 @keyframes float{0%,100%{transform:rotate(var(--r)) translateY(0)}50%{transform:rotate(calc(var(--r) + 1.2deg)) translateY(-12px)}}
 .snap:hover{z-index:6}
 .snap img{display:block;width:100%;height:196px;object-fit:cover;border-radius:11px}
-.snap figcaption{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-top:11px;text-align:center}
+.snap figcaption{font-family:var(--font-sans);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-top:11px;text-align:center}
 .s1{top:-6px;left:-44px;--r:-8deg;--ad:.4s;--fd:7.4s}
 .s2{bottom:6px;right:-52px;--r:7deg;--ad:.62s;--fd:8.2s}
 .s3{bottom:112px;left:-64px;--r:5deg;--ad:.84s;--fd:6.8s;width:176px}
@@ -66,9 +66,9 @@ h1 .hl:after{content:"";position:absolute;left:-.04em;right:-.04em;bottom:.26em;
 .notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:98px;height:26px;border-radius:999px;background:#000;z-index:5}
 .slide{position:absolute;inset:0;padding:56px 18px 22px;display:flex;flex-direction:column;gap:11px;opacity:0;transform:translateY(14px) scale(.99);transition:opacity .5s,transform .5s}
 .slide.on{opacity:1;transform:none}
-.sb{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10px;color:rgba(244,240,234,.6);margin-bottom:4px}
+.sb{display:flex;justify-content:space-between;font-family:var(--font-sans);font-size:10px;color:rgba(244,240,234,.6);margin-bottom:4px}
 .card{background:rgba(244,240,234,.07);border:1px solid rgba(244,240,234,.1);border-radius:18px;padding:15px}
-.card .k{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+.card .k{font-family:var(--font-sans);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
 .card h4{font-family:var(--font-display);font-size:20px;font-weight:600;letter-spacing:-.02em;margin:7px 0 5px}
 .card p{font-size:13px;line-height:1.45;color:rgba(244,240,234,.72)}
 .card.hl{background:var(--lime);border-color:var(--lime);color:var(--ink)}
@@ -77,7 +77,7 @@ h1 .hl:after{content:"";position:absolute;left:-.04em;right:-.04em;bottom:.26em;
 .pill{display:inline-block;margin-top:10px;padding:5px 11px;border-radius:999px;background:var(--lime);color:var(--ink);font-size:11px;font-weight:600}
 .lb{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(244,240,234,.09);font-size:13px}
 .lb:last-child{border:0}
-.lb .r{font-family:var(--font-mono);color:rgba(244,240,234,.45);width:14px}
+.lb .r{font-family:var(--font-sans);color:rgba(244,240,234,.45);width:14px}
 .lb .n{flex:1}
 .lb .p{font-weight:600}
 .lb.you{color:var(--lime)}
@@ -100,7 +100,7 @@ h2{font-size:clamp(38px,5vw,66px)}
 .head .mono{grid-area:k;margin-bottom:4px}
 .beats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:58px;list-style:none}
 .beat{background:var(--cream2);border-radius:var(--r);padding:24px;box-shadow:inset 0 0 0 1px var(--line)}
-.beat time{font-family:var(--font-mono);font-size:12px;color:var(--ink3)}
+.beat time{font-family:var(--font-sans);font-size:12px;color:var(--ink3)}
 .beat b{display:block;font-family:var(--font-display);font-size:22px;font-weight:600;letter-spacing:-.02em;margin:12px 0 8px}
 .beat p{font-size:14.5px;line-height:1.5;color:var(--ink2)}
 .beat:nth-child(3){background:var(--lime);box-shadow:none}
@@ -112,7 +112,7 @@ h2{font-size:clamp(38px,5vw,66px)}
 .gal figure:nth-child(4){margin-top:34px}
 .gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
 .gal figure:hover img{transform:scale(1.04)}
-.gal figcaption{position:absolute;left:12px;bottom:12px;padding:6px 11px;border-radius:999px;background:rgba(14,11,8,.62);backdrop-filter:blur(8px);color:#F4F0EA;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.gal figcaption{position:absolute;left:12px;bottom:12px;padding:6px 11px;border-radius:999px;background:rgba(14,11,8,.62);backdrop-filter:blur(8px);color:#F4F0EA;font-family:var(--font-sans);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
 
 /* cta */
 .cta{padding:104px 0 110px}
@@ -169,7 +169,7 @@ footer{padding:0 0 56px}
 .hero.full h1{font-size:clamp(50px,8.4vw,128px);margin:0 auto}
 .hero.full .lead{margin:26px auto 0;max-width:40ch;font-size:19px}
 .hero.full .hacts{justify-content:center;margin-top:34px}
-.hero.full .fine{margin-top:18px;font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.hero.full .fine{margin-top:18px;font-family:var(--font-sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
 .btn.big{height:64px;padding:0 34px;font-size:18px;border-radius:999px;box-shadow:0 14px 30px -12px rgba(23,19,14,.5)}
 .btn.big .arr{transition:transform .2s}
 .btn.big:hover .arr{transform:translateX(4px)}
@@ -185,7 +185,7 @@ footer{padding:0 0 56px}
 .hero.full .s8{bottom:3%;right:31%;--r:5deg;--ad:.88s;--fd:7.5s;width:176px}
 .hero.full .s7 img,.hero.full .s8 img{height:158px}
 .scroller{position:relative;z-index:4;display:flex;justify-content:center;margin-top:44px}
-.scroller span{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);animation:bob 2.4s ease-in-out infinite}
+.scroller span{font-family:var(--font-sans);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);animation:bob 2.4s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(5px);opacity:1}}
 .sec.app{padding-top:96px}
 .appgrid{display:flex;justify-content:center;margin-top:44px}
@@ -243,7 +243,7 @@ body{min-height:100svh;display:flex;flex-direction:column}
 .mark .wrap{display:flex;justify-content:center}
 .mark .brand{display:flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
 .mark .brand img{height:26px;display:block}
-.mark .brand span{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.6}
+.mark .brand span{font-family:var(--font-sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.6}
 .solo .badges{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;margin-top:clamp(34px,7svh,86px);position:relative;z-index:7}
 .solo .badges a{display:block;line-height:0}
 .solo .badges img{height:54px;width:auto;display:block}
@@ -286,6 +286,20 @@ body{min-height:100svh;display:flex;flex-direction:column}
 .reel .tile:nth-child(4){--i:3;--y:-8px;--rot:2.5deg;--sc:1.01;--fd:9.6s;--fdel:0s;z-index:5}
 .reel .tile:nth-child(5){--i:4;--y:20px;--rot:-4.5deg;--sc:.93;--fd:8.8s;--fdel:1.8s;z-index:4}
 .reel .tile:nth-child(6){--i:5;--y:24px;--rot:6.5deg;--sc:.84;--fd:11.6s;--fdel:1.5s;z-index:2;filter:brightness(.9)}
+/* depth: the shadow is the distance cue. --sh scales one shadow recipe, so the
+   far cards cast a tight shadow and the front one a long soft drop. Tuned for
+   a light ground: warm ink, never black. */
+.tile{--sh:1;box-shadow:
+  0 1px 2px rgba(23,19,14,calc(.10 * var(--sh))),
+  0 calc(8px * var(--sh)) calc(16px * var(--sh)) -6px rgba(23,19,14,calc(.16 * var(--sh))),
+  0 calc(22px * var(--sh)) calc(38px * var(--sh)) -16px rgba(23,19,14,calc(.22 * var(--sh))),
+  0 calc(44px * var(--sh)) calc(74px * var(--sh)) -36px rgba(23,19,14,calc(.30 * var(--sh))),
+  inset 0 0 0 1px rgba(23,19,14,.07)}
+.reel .tile:nth-child(1),.reel .tile:nth-child(6){--sh:.62}
+.reel .tile:nth-child(2),.reel .tile:nth-child(5){--sh:.82}
+.reel .tile:nth-child(4){--sh:1}
+.reel .tile:nth-child(3){--sh:1.25}
+
 @keyframes tilefloat{0%,100%{transform:translate(var(--x),var(--y)) rotate(var(--rot)) scale(var(--sc))}50%{transform:translate(var(--x),calc(var(--y) - 14px)) rotate(calc(var(--rot) + 1.3deg)) scale(var(--sc))}}
 @media(prefers-reduced-motion:reduce){.tile{animation:none}}
 /* narrow screens: overlap the row into a spread hand so it stays on-stage */
@@ -297,19 +311,23 @@ body{min-height:100svh;display:flex;flex-direction:column}
 @media(max-width:560px){.hero.solo h1{font-size:clamp(24px,7vw,34px)}}
 /* the subtitle drops out of the display face into the plain grotesque, at a
    quiet size and weight, so it reads as the aside it is */
-.sub{font-family:var(--font-sans);font-weight:400;font-size:clamp(16px,1.75vw,23px);line-height:1.45;letter-spacing:-.011em;margin-top:clamp(14px,2.6svh,28px);color:var(--cream);opacity:.62}
+.sub{font-family:var(--font-sans);font-weight:400;font-size:clamp(16px,1.75vw,23px);line-height:1.45;letter-spacing:-.011em;margin-top:clamp(14px,2.6svh,28px);color:var(--ink2);opacity:.9}
 @media(max-width:560px){.sub{font-size:clamp(15px,4.2vw,18px)}}
 
-/* ---- dark room: flat black, no grain, no glow ---- */
-body{background:#000;color:var(--cream)}
-.mark .brand span{opacity:.5}
+/* ---- grainy gradient photo behind everything ----
+   A fixed pseudo-element rather than background-attachment:fixed, which iOS
+   Safari renders wrong. No scrim: the image shows raw. */
+html{background:var(--cream)}
+body{background:transparent;color:var(--ink)}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:url("/img/bg.jpg");background-size:cover;background-position:center;background-repeat:no-repeat}
+.mark .brand span{opacity:.75}
 
 
 .reelstage{z-index:100}
 
 /* the wordmark file is already white; the design's .brand rule inverts and
    darkens it for the cream page, which is backwards on a dark one */
-.mark .brand img{filter:none}
+
 
 /* phones: one row of six leaves the photos postage-stamp sized, so the deck
    re-grids into two rows of three and the cards nearly triple in width. Only

@@ -1,0 +1,42 @@
+/* Ambassador — a single narrow column on the same flat black. Deliberately
+   plainer than the landing page: this is a job post, it should read fast. */
+.amb{position:relative;z-index:100;flex:1;padding:clamp(80px,12svh,128px) 0 clamp(56px,9svh,96px)}
+.amb .wrap{width:min(680px,90vw)}
+
+.amb-back{display:inline-flex;align-items:center;gap:12px;margin-bottom:clamp(30px,5svh,48px)}
+.amb-back img{height:22px;width:auto;display:block;filter:invert(1) brightness(.12)}
+.amb-back span{font-family:var(--font-sans);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:rgba(23,19,14,.45);transition:color .2s}
+.amb-back:hover span{color:var(--accent)}
+
+.amb-kicker{font-family:var(--font-sans);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);opacity:.8}
+.amb-head h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.035em;font-size:clamp(32px,5vw,58px);line-height:1.04;margin-top:14px;color:var(--ink)}
+
+.amb-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.amb-tags span{padding:7px 13px;border-radius:999px;font-family:var(--font-sans);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:rgba(23,19,14,.6);box-shadow:inset 0 0 0 1px rgba(23,19,14,.16)}
+
+.amb-intro{margin-top:24px;font-size:clamp(16px,1.6vw,18px);line-height:1.62;color:rgba(23,19,14,.66)}
+.amb-intro b{color:var(--ink);font-weight:500}
+
+.amb-sec{margin-top:clamp(40px,6svh,60px);padding-top:clamp(28px,4svh,40px);border-top:1px solid rgba(23,19,14,.09)}
+.amb-sec h2 .amb-emoji{font-size:.72em;margin-right:.5em;vertical-align:.06em}
+.amb-sec h2{font-family:var(--font-display);font-size:clamp(20px,2.3vw,27px);font-weight:600;letter-spacing:-.025em;color:var(--ink)}
+.amb-sec p{margin-top:14px;font-size:15.5px;line-height:1.65;color:rgba(23,19,14,.64)}
+.amb-sec ul{margin-top:18px;padding-left:19px;display:flex;flex-direction:column;gap:11px}
+.amb-sec li{font-size:15.5px;line-height:1.6;color:rgba(23,19,14,.64)}
+.amb-sec li::marker{color:rgba(74,107,10,.6)}
+
+/* pay is the part people scan for, so the numbers get their own column */
+.amb-pay{margin-top:18px;display:flex;flex-direction:column;gap:2px}
+.amb-pay div{display:grid;grid-template-columns:minmax(150px,auto) 1fr;gap:6px 20px;padding:13px 0;border-bottom:1px solid rgba(23,19,14,.07)}
+.amb-pay div:last-child{border-bottom:0}
+.amb-pay dt{font-family:var(--font-sans);font-weight:600;font-size:13px;letter-spacing:.02em;color:var(--accent)}
+.amb-pay dd{font-size:15px;line-height:1.5;color:rgba(23,19,14,.6)}
+
+.amb-cta{display:inline-flex;align-items:center;height:54px;padding:0 28px;margin-top:22px;border-radius:999px;background:var(--lime);color:var(--ink);font-weight:600;font-size:15.5px;transition:transform .18s,background .18s}
+.amb-cta:hover{transform:translateY(-2px);background:#d9ff6e;color:var(--ink)}
+.amb-fine{margin-top:24px!important;font-size:13px!important;color:rgba(23,19,14,.38)!important}
+
+@media(max-width:560px){
+.amb-pay div{grid-template-columns:1fr;gap:4px}
+.amb-pay dt{font-size:14px}
+}
